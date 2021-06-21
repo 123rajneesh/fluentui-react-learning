@@ -1,6 +1,7 @@
 import React from 'react'
 import {Stack,Label} from '@fluentui/react'
 import TodoItem from './TodoItem'
+import TodoListFluentui from './TodoListFluentui'
 
 const TodoList=(props)=>{
     return(
@@ -8,7 +9,8 @@ const TodoList=(props)=>{
             { props.todos.length > 0 ? props.todos.map((todo) => (  
                 <TodoItem todo={todo} key={todo.id}/>  
             )):   
-            <Label>Todo list is empty...</Label>}  
+            <Label>Todo list is empty...</Label>} 
+            <TodoListFluentui todos={props.todos} />
         </Stack> 
     )
 }
